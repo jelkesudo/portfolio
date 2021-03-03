@@ -1,5 +1,5 @@
 /* media queries */
-@media screen and (max-width: 1820px) {
+@media screen and (max-width: 1440px) {
   .cover #natpis h1 {
     font-size: 60px;
   }
@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (max-width: 818px) {
+@media screen and (max-width: 858px) {
   header #logo a {
     font-size: 20px;
   }
@@ -34,55 +34,62 @@
     font-size: 22px;
     padding-bottom: 10px;
   }
+  .section .center-block .service h2 {
+    font-size: 20px;
+  }
+  .section .center-block form {
+    width: 98%;
+  }
+  .section .caption p {
+    font-size: 12px;
+}
 }
 
-@media screen and (max-width: 524px) {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+@media screen and (max-width: 571px) {
   header #logo {
-    width: 100%;
+    width: 48%;
   }
   header nav {
     display: none;
   }
-  header .smallMenu {
-    width: 100%;
-  }
-  header .smallMenu ul li a {
-    text-transform: uppercase;
+  header .dropdown {
+    display: block;
   }
   .cover #natpis h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
   .cover #natpis p {
-    font-size: 15px;
+    font-size: 25px;
   }
-  #skills .center-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .skill {
+  .section .center-block .skill {
     width: 100%;
   }
-  .skill .progres-bar {
+  .section .center-block .service {
     width: 100%;
   }
-  #aboutMeSlika {
+  .section .center-block .project {
     width: 100%;
   }
-  #autorTekst {
+  .section .center-block #aboutMeSlika {
     width: 100%;
+    padding-bottom: 10px;
+  }
+  .section .center-block #autorTekst {
+    width: 100%;
+  }
+  .section .caption p {
+    font-size: 12px;
+  }
+  footer h3{
+    font-size: 10px;
+  }
+  .section .center-block form input[type=submit], .section .center-block form input[type=reset] {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 322px) {
+  .section .caption p {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */
