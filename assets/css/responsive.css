@@ -17,7 +17,7 @@
   }
 }
 
-@media screen and (max-width: 858px) {
+@media screen and (max-width: 869px) {
   header #logo a {
     font-size: 20px;
   }
@@ -47,17 +47,27 @@
     font-size: 12px;
 }
 }
-
-@media screen and (max-width: 571px) {
-  header #logo {
-    width: 48%;
+@media screen and (max-width: 768px){
+	.mainMenu{
+		display: none;
+    width: 100%;
+	}
+  #logo, .hamicon{
+    width: 100%;
+    text-align: center;
   }
-  header nav {
-    display: none;
-  }
-  header .dropdown {
+  .toggleCls{
     display: block;
   }
+}
+
+@media screen and (min-width: 769px){
+	.hamIcon{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 571px) {
   .cover #natpis h1 {
     font-size: 40px;
   }
