@@ -1,6 +1,6 @@
 /* basic SCSS */
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:ital@1&display=swap");
-@-webkit-keyframes gradijentAnimacija {
+@-webkit-keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -11,7 +11,7 @@
     background-position: 0% 50%;
   }
 }
-@keyframes gradijentAnimacija {
+@keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -123,10 +123,9 @@ header .dropdown {
   width: 100%;
   height: 100vh;
   background: linear-gradient(285.33deg, #E3AA67 34.3%, #EF716A 63.62%), #FFFFFF;
-  -webkit-animation-name: gradijentAnimation;
-          animation-name: gradijentAnimation;
-  -webkit-animation-duration: 15s ease infinite;
-          animation-duration: 15s ease infinite;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
 }
 
 .cover #natpis {
