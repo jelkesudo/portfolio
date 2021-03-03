@@ -157,12 +157,12 @@ header{
         z-index: 1;
         margin-left: 10%;
         h1{
-            font-size: 80px;
+            font-size: 100px;
             color: $bojaSlova2;
         }
         p{
             @extend h1;
-            font-size: 40px;
+            font-size: 60px;
         }
     }
 }
