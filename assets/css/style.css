@@ -476,7 +476,7 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 571px) {
+@media screen and (max-width: 584px) {
   nav {
     display: none;
   }
