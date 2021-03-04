@@ -99,6 +99,12 @@ header #logo a {
   font-size: 30px;
 }
 
+header #logo a:hover {
+  color: #E3AA67;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,6 +118,13 @@ header nav ul {
 
 header nav ul li {
   padding: 20px 20px;
+}
+
+header nav ul li a:hover {
+  color: #E3AA67;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-bottom: 1px solid #E3AA67;
 }
 
 .dropdown {
@@ -241,6 +254,12 @@ header nav ul li {
   padding: 10px 0px;
 }
 
+.section .center-block .project:hover {
+  color: #E3AA67;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .section .center-block #aboutMeSlika {
   width: 48%;
   border-radius: 50%;
@@ -275,6 +294,10 @@ header nav ul li {
   text-align: left;
 }
 
+.section .center-block .info h2 {
+  padding: 10px 0px;
+}
+
 .section .center-block .info ul li {
   padding: 20px 0px;
 }
@@ -296,6 +319,12 @@ header nav ul li {
 
 .section .center-block .info ul li ul li a i {
   font-size: 20px;
+}
+
+.section .center-block .info ul li ul li a i:hover {
+  color: #E3AA67;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .section .center-block form {
@@ -339,6 +368,15 @@ header nav ul li {
   margin: 10px 5px;
 }
 
+.section .center-block form input[type=submit]:hover, .section .center-block form input[type=reset]:hover {
+  background-color: #ffffff;
+  color: #121212;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  outline: 1px solid #121212;
+}
+
 .section:nth-child(odd) {
   background: linear-gradient(285.33deg, #E3AA67 34.3%, #EF716A 63.62%), #FFFFFF;
   color: #ffffff;
@@ -352,35 +390,26 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background: linear-gradient(285.33deg, #E3AA67 34.3%, #EF716A 63.62%), #FFFFFF;
   color: #ffffff;
 }
 
-footer .cascading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-bottom: 20px;
+footer h3 {
+  padding: 10px 0px;
 }
 
-footer .cascading a {
+footer a {
   color: #ffffff;
   padding: 10px 0px;
   font-weight: bold;
 }
 
-footer .cascading a:hover {
-  color: #ffffff;
+footer a:hover {
+  color: #121212;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* media queries */
@@ -503,7 +532,16 @@ footer .cascading a:hover {
   .section .caption p {
     font-size: 12px;
   }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   footer h3 {
+    font-size: 10px;
+  }
+  footer a {
     font-size: 10px;
   }
   .section .center-block form input[type=submit], .section .center-block form input[type=reset] {

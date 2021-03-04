@@ -127,6 +127,10 @@ header{
         @include padding10;
         a{
             font-size: $podnaslov;
+            &:hover{
+              color: #E3AA67;
+              transition: 0.5s;
+            }
         }
     }
     nav{
@@ -135,6 +139,13 @@ header{
             @include centar;
             li{
                 padding: 20px 20px;
+                a{
+                  &:hover{
+                    color: #E3AA67;
+                    transition: 0.5s;
+                    border-bottom: 1px solid #E3AA67;
+                  }
+                }
             }
         }
     }
@@ -216,12 +227,16 @@ header{
         .project{
             @include sirina30;
             a{
-                img{
-                    @include sirina100;
-                }
+              img{
+                  @include sirina100;
+              }
             }
             .caption{
                 @include padding10;
+            }
+            &:hover{
+              color: #E3AA67;
+              transition: 0.5s;
             }
         }
         #aboutMeSlika{
@@ -247,6 +262,9 @@ header{
         }
         .info{
             @include left-text;
+            h2{
+              @include padding10;
+            }
             ul{
                 li{
                     padding: 20px 0px;
@@ -258,6 +276,10 @@ header{
                             a{
                                 i{
                                     font-size: $velicinaSlova + 4px;
+                                    &:hover{
+                                      color: #E3AA67;
+                                      transition: 0.5s;
+                                    }
                                 }
                             }
                         }
@@ -294,6 +316,13 @@ header{
                 color: $bojaSlova2;
                 padding: 15px 5px;
                 margin: 10px 5px;
+                &:hover{
+                  background-color: $bojaSlova2;
+                  color: $bojaSlova;
+                  transition: 0.5s;
+                  cursor: pointer;
+                  outline: 1px solid $bojaSlova;
+                }
             }
         }
     }
@@ -306,21 +335,19 @@ footer{
     @include sirina100;
     @include padding10;
     @include fleks;
-    @include kolona;
+    @include space-a;
     background: $gradijent;
     color: $bojaSlova2;
-    .cascading{
-        @include fleks;
-        @include kolona;
-        padding-bottom: 20px;
-        a{
-          color: $bojaSlova2;
-          @include padding10;
-          @include podebljano;
-          &:hover{
-            color: $bojaSlova1;
-            transition: 0.5s;
-          }
+      h3{
+        @include padding10;
+      }
+      a{
+        color: $bojaSlova2;
+        @include padding10;
+        @include podebljano;
+        &:hover{
+          color: $bojaSlova;
+          transition: 0.5s;
         }
     }
 }
@@ -441,7 +468,13 @@ footer{
     .section .caption p {
       font-size: 12px;
     }
+    footer{
+      @include kolona;
+    }
     footer h3{
+      font-size: 10px;
+    }
+    footer a{
       font-size: 10px;
     }
     .section .center-block form input[type=submit], .section .center-block form input[type=reset] {
