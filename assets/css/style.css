@@ -415,8 +415,8 @@ footer {
   .dropbtn {
     background-color: #FFFFFF;
     color: #121212;
-    padding: 10px;
-    font-size: 20px;
+    padding: 16px;
+    font-size: 16px;
     border: none;
     z-index: 3;
   }
@@ -467,7 +467,6 @@ footer {
   }
   .section .center-block .project {
     width: 100%;
-    padding: 10px 0px;
   }
   .section .center-block #aboutMeSlika {
     width: 100%;
