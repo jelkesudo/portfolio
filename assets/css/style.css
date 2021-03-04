@@ -352,9 +352,34 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: linear-gradient(285.33deg, #E3AA67 34.3%, #EF716A 63.62%), #FFFFFF;
+  color: #ffffff;
+}
+
+footer .cascading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 20px;
+}
+
+footer .cascading a {
+  color: #ffffff;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+
+footer .cascading a:hover {
   color: #ffffff;
 }
 
@@ -470,7 +495,7 @@ footer {
   }
   .section .center-block #aboutMeSlika {
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   .section .center-block #autorTekst {
     width: 100%;

@@ -306,9 +306,23 @@ footer{
     @include sirina100;
     @include padding10;
     @include fleks;
-    @include space-a;
+    @include kolona;
     background: $gradijent;
     color: $bojaSlova2;
+    .cascading{
+        @include fleks;
+        @include kolona;
+        padding-bottom: 20px;
+        a{
+          color: $bojaSlova2;
+          @include padding10;
+          @include podebljano;
+          &:hover{
+            color: $bojaSlova1;
+            transition: 0.5s;
+          }
+        }
+    }
 }
 
 /* media queries */
