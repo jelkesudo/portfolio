@@ -114,6 +114,10 @@ header nav ul li {
   padding: 20px 20px;
 }
 
+.dropdown {
+  display: none;
+}
+
 .cover {
   position: relative;
   width: 100%;
