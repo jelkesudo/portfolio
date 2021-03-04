@@ -143,20 +143,28 @@ header nav ul li a:hover {
 
 .cover #natpis {
   width: 100%;
-  text-align: left;
   position: absolute;
   top: 45vh;
   z-index: 1;
-  margin-left: 10%;
 }
 
-.cover #natpis h1, .cover #natpis p {
+.cover #natpis h1, .cover #natpis p, .cover #natpis a i {
   font-size: 100px;
   color: #ffffff;
 }
 
-.cover #natpis p {
+.cover #natpis p, .cover #natpis a i {
   font-size: 60px;
+}
+
+.cover #natpis a i {
+  padding: 50px 0px;
+}
+
+.cover #natpis a i:hover {
+  font-size: 70px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .section {
@@ -182,7 +190,7 @@ header nav ul li a:hover {
           justify-content: space-between;
 }
 
-.section .center-block .skill p {
+.section .center-block .skill p, .section .center-block .skill .cover #natpis a i, .cover #natpis a .section .center-block .skill i {
   text-align: left;
   padding: 10px 0px;
 }
@@ -238,7 +246,7 @@ header nav ul li a:hover {
   padding-bottom: 10px;
 }
 
-.section .center-block .service p {
+.section .center-block .service p, .section .center-block .service .cover #natpis a i, .cover #natpis a .section .center-block .service i {
   text-align: justify;
 }
 
@@ -414,13 +422,13 @@ footer a:hover {
 
 /* media queries */
 @media screen and (max-width: 1440px) {
-  .cover #natpis h1, .cover #natpis p {
+  .cover #natpis h1, .cover #natpis p, .cover #natpis a i {
     font-size: 60px;
   }
-  .cover #natpis p {
+  .cover #natpis p, .cover #natpis a i {
     font-size: 40px;
   }
-  .section .caption p {
+  .section .caption p, .section .caption .cover #natpis a i, .cover #natpis a .section .caption i {
     font-size: 14px;
   }
   .section .info ul li {
@@ -441,11 +449,17 @@ footer a:hover {
   header nav ul li a {
     font-size: 12px;
   }
-  .cover #natpis h1, .cover #natpis p {
+  .cover #natpis h1, .cover #natpis p, .cover #natpis a i {
     font-size: 50px;
   }
-  .cover #natpis p {
+  .cover #natpis p, .cover #natpis a i {
     font-size: 30px;
+  }
+  .cover #natpis a i {
+    font-size: 30px;
+  }
+  .cover #natpis a i:hover {
+    font-size: 40px;
   }
   .service h2 {
     font-size: 22px;
@@ -457,7 +471,7 @@ footer a:hover {
   .section .center-block form {
     width: 98%;
   }
-  .section .caption p {
+  .section .caption p, .section .caption .cover #natpis a i, .cover #natpis a .section .caption i {
     font-size: 12px;
   }
 }
@@ -507,11 +521,14 @@ footer a:hover {
   header #logo {
     width: 100%;
   }
-  .cover #natpis h1, .cover #natpis p {
+  .cover #natpis h1, .cover #natpis p, .cover #natpis a i {
     font-size: 40px;
   }
-  .cover #natpis p {
+  .cover #natpis p, .cover #natpis a i {
     font-size: 25px;
+  }
+  .cover #natpis a i:hover {
+    font-size: 35px;
   }
   .section .center-block .skill {
     width: 100%;
@@ -529,7 +546,7 @@ footer a:hover {
   .section .center-block #autorTekst {
     width: 100%;
   }
-  .section .caption p {
+  .section .caption p, .section .caption .cover #natpis a i, .cover #natpis a .section .caption i {
     font-size: 12px;
   }
   footer {
@@ -550,7 +567,7 @@ footer a:hover {
 }
 
 @media screen and (max-width: 322px) {
-  .section .caption p {
+  .section .caption p, .section .caption .cover #natpis a i, .cover #natpis a .section .caption i {
     font-size: 10px;
   }
 }
