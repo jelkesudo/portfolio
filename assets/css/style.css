@@ -348,7 +348,7 @@ header nav ul li a:hover {
 }
 
 .section .center-block form input[type=text] {
-  width: 100%;
+  width: 48%;
   padding: 15px 5px;
   margin: 10px 7px;
   border: none;
