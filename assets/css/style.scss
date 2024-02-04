@@ -1,502 +1,58 @@
-/* basic SCSS */
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+$crna: #121212;
+$bela: #FFF;
+@font-face {
+    font-family: "stranica";
+    src: url("../fonts/PoppinsRegular.ttf");
 }
-$bojaSlova: #121212;
-$bojaSlova2: #ffffff;
-$progresbar: #767676;
-$gradijent: linear-gradient(285.33deg, #E3AA67 34.3%, #EF716A 63.62%), #FFFFFF;
-$prviGradijent: #E3AA67;
-$drugiGradijent: #EF716A;
-$velicinaSlova: 16px;
-$podnaslov: 30px;
-$procenti: (
-            osamdeset: 80%, 
-            pedeset: 50%, 
-            sesdeset: 60%,
-            sedamdeset: 70%,
-            sesdeset-pet: 65%);
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:ital@1&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
-body{
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-}
-::-webkit-scrollbar {
-    width: 15px;
-  }
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-}
-::-webkit-scrollbar-thumb {
-    background: $gradijent;
-}
-@mixin padding10{
-    padding: 10px 0px;
-}
-@mixin padding20{
-    padding: 20px 0px;
-}
-@mixin padding50{
-    padding: 50px 0px;
-}
-@mixin centriranje{
-    margin: 0px auto;
-}
-@mixin sirina100{
-    width: 100%;
-}
-@mixin sirina80{
-    width: 80%;
-}
-@mixin sirina48{
-    width: 48%;
-}
-@mixin sirina30{
-    width: 30%;
-}
-@mixin fleks{
+@mixin fleks(){
     display: flex;
     flex-wrap: wrap;
 }
-@mixin space-a{
-    justify-content: space-around;
-}
-@mixin space-b{
-    justify-content: space-between;
-}
-@mixin centar{
-    justify-content: center;
-}
-@mixin kolona{
-    flex-direction: column;
-}
-@mixin left-text{
-    text-align: left;
-}
-@mixin justify-text{
-    text-align: justify;
-}
-@mixin podebljano{
-    font-weight: bold;
-}
-@mixin naCentar{
-    justify-items: center;
-}
-.center-block{
-    @include sirina80;
-    @include centriranje;
-}
-.d-flex{
-    @include fleks;
-}
-.space-a{
-    @include space-a;
-}
-.space-b{
-    @include space-b;
-}
-ul{
-    list-style-type: none;
-}
-a{
-    text-decoration: none;
-    color: $bojaSlova;
-    font-size: $velicinaSlova;
-}
-header{
-    @include sirina100;
-    z-index: 2;
-    position: fixed;
-    background: #FFFFFF;
-    #logo{
-        @include padding10;
-        a{
-            font-size: $podnaslov;
-            &:hover{
-              color: #E3AA67;
-              transition: 0.5s;
-            }
-        }
-    }
-    nav{
-        ul{
-            @include fleks;
-            @include centar;
-            li{
-                padding: 20px 20px;
-                a{
-                  &:hover{
-                    color: #E3AA67;
-                    transition: 0.5s;
-                    border-bottom: 1px solid #E3AA67;
-                  }
-                }
-            }
-        }
-    }
-}
-.dropdown{
-    display:none;
-}
-.cover{
-    position: relative;
+.fj-w100{
     width: 100%;
-    height: 100vh;
-    background: $gradijent;
-	  background-size: 400% 400%;
-	  animation: gradient 15s ease infinite;
-        #natpis{
-        @include sirina100;
-        position: absolute;
-        top: 45vh;
-        z-index: 1;
-        h1{
-            font-size: 100px;
-            color: $bojaSlova2;
-        }
-        p{
-            @extend h1;
-            font-size: 60px;
-        }
-        a{
-          i{
-            @extend p;
-            @include padding50;
-            &:hover{
-              font-size: 70px;
-              transition: 0.5s;
-            }
-          }
-        }
-    }
 }
-.section{
-    @include sirina100;
-    @include padding50;
-    .sectionNaslov{
-        h2{
-            font-size: $podnaslov;
-            padding-bottom: 40px;
-        }
-    }
-    .center-block{
-        .skill{
-            @include sirina48;
-            @include padding20;
-            @include fleks;
-            @include space-b;
-            p{
-                @include left-text;
-                @include padding10;
-            }
-            .progres-bar{
-                @include sirina100;
-                height: 20px;
-                background: $bojaSlova;
-                @each $ime, $procenat in $procenti {
-                    .#{$ime} {
-                        background: $gradijent;
-                        width: $procenat;
-                        height: 20px;
-                    }
-                }
-            }
-        }
-        .service{
-            @include sirina30;
-            @include padding50;
-            i{
-                font-size: $podnaslov + 25px;
-                padding-bottom: 10px;
-            }
-            h2{
-                font-size: $podnaslov - 6px;
-                padding-bottom: 10px;
-            }
-            p{
-                @include justify-text;
-            }
-        }
-        .project{
-            @include sirina30;
-            a{
-              img{
-                  @include sirina100;
-              }
-            }
-            .caption{
-                @include padding10;
-            }
-            &:hover{
-              color: #E3AA67;
-              transition: 0.5s;
-            }
-        }
-        #aboutMeSlika{
-            @include sirina48;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
+.fj-w50{
+    width: 50%;
+}
+.fj-w25{
+    width: 25%;
+}
+body{
+    color: $bela;
+    background-color: $crna;
+    font-family: "stranica";
+    #loader{
+        width: 100%;
+        height: 100vh;
+        background-color: $crna;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .loaderBodySkeleton{
+            width: 20%;
+            text-align: center;
             img{
-                width: 60%;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
+                width: 50%;
             }
-        } 
-        #autorTekst{
-            @include sirina48;
-            @include fleks;
-            align-items: center;
-        }
-        .info{
-            @include left-text;
-            h2{
-              @include padding10;
-            }
-            ul{
-                li{
-                    padding: 20px 0px;
-                    ul{
-                        @include fleks;
-                        @include centar;
-                        li{
-                            padding: 10px 10px;
-                            a{
-                                i{
-                                    font-size: $velicinaSlova + 4px;
-                                    &:hover{
-                                      color: #E3AA67;
-                                      transition: 0.5s;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        form{
-            @include sirina48;
-            @include fleks;
-            @include centar;
-            input[type=text]{
-                @include sirina48;
-                padding: 15px 5px;
-                margin: 10px 7px;
-                border: none;
-                outline: none;
-                border-bottom: 3px solid $bojaSlova;
-            }
-            input[type=email], textarea{
-                @include sirina100;
-                resize: none;
-                padding: 15px 5px;
-                margin: 10px 5px;
-                border: none;
-                outline: none;
-                border-bottom: 3px solid $bojaSlova;
-            }
-            input[type=submit], input[type=reset]{
-                @include sirina30;
-                border: none;
-                outline: none;
-                background-color: $bojaSlova;
-                color: $bojaSlova2;
-                padding: 15px 5px;
-                margin: 10px 5px;
-                &:hover{
-                  background-color: $bojaSlova2;
-                  color: $bojaSlova;
-                  transition: 0.5s;
-                  cursor: pointer;
-                  outline: 1px solid $bojaSlova;
-                }
-            }
-        }
-    }
-    &:nth-child(odd){
-        background: $gradijent;
-        color: $bojaSlova2;
-    }
-}
-footer{
-    @include sirina100;
-    @include padding10;
-    @include fleks;
-    @include space-a;
-    background: $gradijent;
-    color: $bojaSlova2;
-      h3{
-        @include padding10;
-      }
-      a{
-        color: $bojaSlova2;
-        @include padding10;
-        @include podebljano;
-        &:hover{
-          color: $bojaSlova;
-          transition: 0.5s;
         }
     }
 }
-
-/* media queries */
-@media screen and (max-width: 1440px) {
-    .cover #natpis h1 {
-      font-size: 60px;
+.removeIt{
+    animation: fadeOut 0.5s ease-out forwards;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
     }
-    .cover #natpis p {
-      font-size: 40px;
-    }
-    .section .caption p {
-      font-size: 14px;
-    }
-    .section .info ul li {
-      padding: 50px 0px;
-    }
-  }
-  
-  @media screen and (max-width: 869px) {
-    header #logo a {
-      font-size: 20px;
-    }
-    header nav ul li {
-      padding: 10px 10px;
-    }
-    header nav ul li a {
-      font-size: 12px;
-    }
-    .cover #natpis h1 {
-      font-size: 50px;
-    }
-    .cover #natpis p {
-      font-size: 30px;
-    }
-    .cover #natpis a i{
-      font-size: 30px;
-    }
-    .cover #natpis a i:hover{
-      font-size: 40px;
-    }
-    .service h2 {
-      font-size: 22px;
-      padding-bottom: 10px;
-    }
-    .section .center-block .service h2 {
-      font-size: 20px;
-    }
-    .section .center-block form {
-      width: 98%;
-    }
-    .section .caption p {
-      font-size: 12px;
-    }
-  }
-  
-  @media screen and (max-width: 584px) {
-    nav{
-      display: none;
-    }
-    .dropbtn {
-      background-color: #FFFFFF;
-      color: #121212;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      z-index: 3;
-    }
-    .dropdown {
-      width: 100%;
-      position: relative;
-      display: inline-block;
-      z-index: 3;
-    }
-    .dropdown-content {
-      width: 100%;
-      display: none;
-      background-color: #FFFFFF;
-      min-width: 160px;
-      z-index: 3;
-    }
-    .dropdown-content a {
-      color: #121212;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      z-index: 3;
-      border-bottom: 1px solid #121212;
-    }
-    .dropdown-content a:hover {background-color: #FFFFFF;}
-    
-    .dropdown:hover .dropdown-content {display: block;}
-    
-    .dropdown:hover .dropbtn {background-color: linear-gradient(285.33deg, #E3AA67 34.3%, #EF716A 63.62%), #FFFFFF;;}
-    header #logo {
-      width: 100%;
-    }
-    .cover #natpis h1 {
-      font-size: 40px;
-    }
-    .cover #natpis p {
-      font-size: 25px;
-    }
-    .cover #natpis a i:hover{
-      font-size: 35px;
-    }
-    .section .center-block .skill {
-      width: 100%;
-    }
-    .section .center-block .service {
-      width: 100%;
-    }
-    .section .center-block .project {
-      width: 100%;
-    }
-    .section .center-block #aboutMeSlika {
-      width: 100%;
-      padding-bottom: 10px;
-    }
-    .section .center-block #autorTekst {
-      width: 100%;
-    }
-    .section .caption p {
-      font-size: 12px;
-    }
-    footer{
-      @include kolona;
-    }
-    footer h3{
-      font-size: 10px;
-    }
-    footer a{
-      font-size: 10px;
-    }
-    .section .center-block form input[type=submit], .section .center-block form input[type=reset] {
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 322px) {
-    .section .caption p {
-      font-size: 10px;
+    100% {
+        opacity: 0;
+        display: none;
     }
   }
