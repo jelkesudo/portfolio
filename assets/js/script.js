@@ -5,7 +5,7 @@ window.onload = function(){
     $(document.body).css("overflow","hidden");
     $("#pictureLoad").attr("src", srcImage);
     setTimeout(function(){
-        $("#loader").addClass("fadeOut");
+        $("#loader").addClass("fadeOut").css("display", "none");
     $(document.body).css("overflow","visible");
 
     }, 2000);
