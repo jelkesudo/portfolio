@@ -1,5 +1,13 @@
 $crna: #121212;
 $bela: #FFF;
+$tirkiz: #54A496;
+$spacing: 50px;
+$radius: 4px;
+$date: 120px;
+$dotborder: 4px;
+$dot: 11px;
+$line: 4px;
+$background: #252827;
 @font-face {
     font-family: "stranica";
     src: url("../fonts/PoppinsRegular.ttf");
@@ -17,19 +25,26 @@ $bela: #FFF;
 .fj-w100{
     width: 100%;
 }
+.fj-w75{
+    width: 75%;
+}
 .fj-w50{
     width: 50%;
 }
 .fj-w25{
     width: 25%;
 }
+.fj-mx-auto{
+    margin: 0px auto;
+}
 body{
     color: $bela;
-    background-color: $crna;
+    background:radial-gradient(ellipse at center, rgba(37,37,37,1) 0%, rgba(27,27,27,1) 35%, $crna 100%);
     font-family: "stranica";
     #loader{
         width: 100%;
         height: 100vh;
+        z-index: 9;
         background-color: $crna;
         position: fixed;
         display: flex;
@@ -43,8 +58,92 @@ body{
             }
         }
     }
+    main{
+        width: 80%;
+        margin: 0px auto;
+        @include fleks;
+        flex-direction: column;
+        .timeline {
+            border-left: $line solid $tirkiz;
+            border-bottom-right-radius: $radius;    
+            border-top-right-radius: $radius;    
+            color: fade(white, 80%);
+            margin: $spacing auto;  
+            letter-spacing: 0.5px;   
+            position: relative;
+            padding: $spacing;   
+            list-style: none;
+            width: 50%;
+            
+            .event {
+              border-bottom: 1px dashed fade($bela, 10%);
+              position: relative;
+              padding: 20px 0px;
+              .project{
+                width: 100%;
+                border-radius: 10px;
+                position: relative;
+                .imageProject, .descriptionProject{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    img{
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                }
+                .descriptionProject{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(12,12,12,0.5);
+                    text-align: center;
+                    .title, .description, .linkButton{
+                        padding: 10px 0px;
+                        p{
+                            padding: 10px;
+                        }
+                    }
+                    .linkButton{
+                        border: 1px solid white;
+                        transition: 0.5s;
+                        &:hover{
+                            background-color: $bela;
+                        }
+                    }
+                }
+              }
+              &:last-of-type { 
+                padding-bottom: 0;
+                margin-bottom: 0; 
+                border: none;      
+              }
+          
+              &:before, &:after {
+                position: absolute;
+                display: block;
+                top: 0;
+              }
+          
+          
+              &:after {
+                box-shadow: 0 0 0 $dotborder fade($tirkiz,100%);    
+                left: ($spacing + $line + ($dot * 0.35)) * -1;        
+                background: lighten($tirkiz,5%);    
+                border-radius: 50%;  
+                height: $dot;
+                width: $dot;
+                content: "";
+                top: 5px;
+              }
+            }
+        }
+    }
 }
-.removeIt{
+.fadeOut{
     animation: fadeOut 0.5s ease-out forwards;
 }
 @keyframes fadeOut {
@@ -55,4 +154,44 @@ body{
         opacity: 0;
         display: none;
     }
-  }
+}
+@media screen and (max-width: 770px) {
+    main{
+        width: 98% !important;
+        .timeline {
+            width: 100% !important;
+        }
+        h3{
+            font-size: 16px;
+        }
+        p, a{
+            font-size: 12px;
+        }
+        .title, .description, .linkButton{
+            padding: 5px 0px !important;
+            p{
+                padding: 5px;
+            }
+        }
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #252525;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $tirkiz;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #438378;
+}
+
