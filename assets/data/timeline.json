@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "image": "filipjelicport.png",
+        "title": "First portfolio",
+        "description": "Project where I got a basic understanding of responsive design with the previously known HTML and CSS skills.",
+        "href": "https://jelkesudo.github.io/legacyportfolio/"
+    },
+    {
+        "id": "2",
+        "image": "pinekeyboards.png",
+        "title": "Pine keyboards",
+        "description": "For this project the design was mostly done with bootstrap framework, with little to no modification from other css files.",
+        "href": "https://jelkesudo.github.io/pinekeyboards/"
+    },
+    {
+        "title": "JavaScript",
+        "description": "My introduction to JavaScript, that got implemented in my future projects"
+    },
+    {
+        "id": "3",
+        "image": "musichousedaily.png",
+        "title": "Music House Daily",
+        "description": "First project with JavaScript, printing data with filtering, using regexes and variable states.",
+        "href": "https://jelkesudo.github.io/musichousedaily/"
+    },
+    {
+        "id": "4",
+        "image": "musicstop.png",
+        "title": "Music Stop",
+        "description": "Using jquery library and first time using ajax callbacks and localstorage, mock up of a guitar shop.",
+        "href": "https://jelkesudo.github.io/musicstop/"
+    },
+    {
+        "title": "PHP",
+        "description": "After learning and using some of the client technologies, it was time to learn how to hande data from other sources."
+    },
+    {
+        "id": "5",
+        "image": "dotblogg.png",
+        "title": "Dotblog",
+        "description": "Social network using basic php with previously aquired knowledge of client side technologies.",
+        "href": "https://dottblogg.000webhostapp.com/"
+    },
+    {
+        "id": "6",
+        "image": "vinyl.png",
+        "title": "Vinylboy",
+        "description": "In this project the structure of php page consisted of only loading one page, with models being called with the appropriate page call, emulating modern frameworks.",
+        "href": "https://vinylboy.000webhostapp.com/index.php?page=Home"
+    },
+    {
+        "title": "What is next?",
+        "description": "There are more projects that are not hosted at the moment, from those done in Angular, Laravel and other technologies as ASP.NET etc. Of course, this timeline will only grow."
+    }
+]

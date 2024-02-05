@@ -96,21 +96,33 @@ body main .timeline .event .project .descriptionProject {
   justify-content: center;
   top: 0;
   left: 0;
-  background-color: rgba(12, 12, 12, 0.5);
+  background-color: rgba(12, 12, 12, 0.8);
   text-align: center;
+  width: 100%;
+}
+body main .timeline .event .project .descriptionProject .title {
+  color: #54A496;
 }
 body main .timeline .event .project .descriptionProject .title, body main .timeline .event .project .descriptionProject .description, body main .timeline .event .project .descriptionProject .linkButton {
   padding: 10px 0px;
 }
 body main .timeline .event .project .descriptionProject .title p, body main .timeline .event .project .descriptionProject .description p, body main .timeline .event .project .descriptionProject .linkButton p {
   padding: 10px;
+  font-size: 12px;
 }
-body main .timeline .event .project .descriptionProject .linkButton {
+body main .timeline .event .project .descriptionProject a {
+  color: #FFF;
+  text-decoration: none;
+}
+body main .timeline .event .project .descriptionProject a .linkButton {
   border: 1px solid white;
   transition: 0.5s;
 }
-body main .timeline .event .project .descriptionProject .linkButton:hover {
+body main .timeline .event .project .descriptionProject a .linkButton:hover {
   background-color: #FFF;
+}
+body main .timeline .event .project .descriptionProject a:hover {
+  color: #121212;
 }
 body main .timeline .event:last-of-type {
   padding-bottom: 0;
