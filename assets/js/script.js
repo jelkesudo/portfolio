@@ -1,10 +1,6 @@
 window.onload = function(){
-    const d = new Date();
-    let time = d.getTime();
-    let srcImage = `assets/img/logo.gif?${time}`;
-
+    AOS.init();
     $(document.body).css("overflow","hidden");
-    $("#pictureLoad").attr("src", srcImage);
     setTimeout(function () {
         let loader = $("#loader");
         let landingMessage = $("#landingMessage");
@@ -46,7 +42,7 @@ function printSimpleTimelineUnit(d){
 }
 
 function printImageTimelineUnit(d){
-    return `<li class="event">
+    return `<li class="event" data-aos="fade-down">
     <div class="project">
       <div class="imageProject">
         <img src="assets/img/${d.image}" alt="portfolio">

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="assets/aos-master/dist/aos.css">
     <link rel="stylesheet" href="assets/css/style.css"/>
     <title>Portfolio</title>
 </head>
@@ -22,11 +23,25 @@
       </div>
     </div>
     <div class="container fj-mx-auto">
-      <div class="pageTitle fj-w50 fj-mx-auto">
-        <h2>My project roadmap</h2>
+      <div id="aboutMe" class="fj-w50 fj-mx-auto">
+        <div class="picAndElem fj-w100">
+          <div class="picture">
+            <img src="assets/img/filipjelic.png" alt="author">
+          </div>
+          <div class="elem">
+            <div class="firstLastName fj-w100"><h3>Filip Jelić</h3></div>
+            <div class="occupation fj-w100"><h5><span class="fj-cyan">Web</span> Developer</h5></div>
+          </div>
+        </div>
+        <div class="description fj-w100">
+          <p>A 22 year old computer obsessed person with a high determination and will to learn and expand already aquired skills and knowledge. Even when i was a child it was my passion to tinker with computers, and web development is a fresh step in my IT career, where it connects people and makes their everyday chores easier.</p>
+        </div>
       </div>
-      <div id="timeline-content">      
-        <ul id="printTimeline" class="timeline"></ul>
+      <div class="pageTitle fj-w50 fj-mx-auto" data-aos="fade-right">
+        <h2>My <span class="fj-cyan">projects</span> roadmap</h2>
+      </div>
+      <div id="timeline-content">
+        <ul id="printTimeline" class="timeline" data-aos="fade-down"></ul>
       </div>
       <div id="contact">
 
@@ -34,6 +49,7 @@
     </div>
   </main>
   <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/aos-master/dist/aos.js"></script>
   <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

@@ -42,7 +42,6 @@ $background: #252827;
 }
 body{
     color: $bela;
-    //background:radial-gradient(ellipse at center, rgba(37,37,37,1) 0%, rgba(27,27,27,1) 35%, $crna 100%);
     background-color: $crna;
     font-family: "stranica";
     #loader{
@@ -91,6 +90,42 @@ body{
                 bottom: 50px;
                 right: 50px;
                 opacity: 0;
+            }
+        }
+        #aboutMe{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 20px;
+            @include fleks();
+            flex-direction: column;
+            background-color: #222222;
+            border-radius: 10px;
+            .picAndElem, .description{
+                padding: 20px;
+            }
+            .picAndElem{
+                @include fleks();
+                align-items: center;
+                .picture{
+                    width: 35%;
+                    text-align: center;
+                    img{
+                        width: 80%;
+                        border-radius: 10px;
+                    }
+                }
+                .elem{
+                    width: 64%;
+                    h3, h5{
+                        padding: 5px 20px;
+                    }
+                    h3{
+                        font-size: 2em;
+                    }
+                    h5{
+                        font-size: 2.5em;
+                    }
+                }
             }
         }
         #timeline-content{
@@ -222,7 +257,7 @@ body{
             width: 98% !important;
         }
         .timeline {
-            width: 100% !important;
+            width: 80% !important;
         }
         h3{
             font-size: 16px;
@@ -248,6 +283,84 @@ body{
             }
             #centerGif {
                 width: 100% !important;
+            }
+        }
+        #aboutMe{
+            width: 80% !important;
+            .picAndElem{
+                text-align: center;
+                .picture{
+                    width: 100% !important; 
+                    img{
+                        width: 50% !important;
+                        border-radius: 10px;
+                    }
+                }
+                .elem{
+                    width: 100% !important;
+                    h3, h5{
+                        padding: 5px 10px;
+                    }
+                    h3{
+                        font-size: 1.5em;
+                    }
+                    h5{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+        .pageTitle{
+            padding-left: 30px;
+            h2{
+                font-size: 2em;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    main{
+        #timeline-content{
+            .timeline {
+                width: 100% !important;
+                padding: 20px !important;
+                .event {
+                    padding: 0px;
+                    &:after {
+                        box-shadow: 0 0 0 $dotborder fade($tirkiz,100%);    
+                        left: (20px + $line + ($dot * 0.35)) * -1 !important;        
+                        background: lighten($tirkiz,5%);    
+                        border-radius: 50%;  
+                        height: $dot;
+                        width: $dot;
+                        content: "";
+                        top: 5px;
+                    }
+                }
+                
+            }
+        }
+        
+        #aboutMe{
+            .picAndElem{
+                .picture{
+                    width: 100% !important; 
+                    img{
+                        width: 70% !important;
+                        border-radius: 10px;
+                    }
+                }
+                .elem{
+                    h3, h5{
+                        padding: 2.5px 5px;
+                    }
+                    h3{
+                        font-size: 1em !important;
+                    }
+                    h5{
+                        font-size: 1.5em !important;
+                    }
+                }
             }
         }
     }

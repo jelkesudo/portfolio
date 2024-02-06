@@ -89,6 +89,44 @@ body main #landing #landingMessage {
   right: 50px;
   opacity: 0;
 }
+body main #aboutMe {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #222222;
+  border-radius: 10px;
+}
+body main #aboutMe .picAndElem, body main #aboutMe .description {
+  padding: 20px;
+}
+body main #aboutMe .picAndElem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body main #aboutMe .picAndElem .picture {
+  width: 35%;
+  text-align: center;
+}
+body main #aboutMe .picAndElem .picture img {
+  width: 80%;
+  border-radius: 10px;
+}
+body main #aboutMe .picAndElem .elem {
+  width: 64%;
+}
+body main #aboutMe .picAndElem .elem h3, body main #aboutMe .picAndElem .elem h5 {
+  padding: 5px 20px;
+}
+body main #aboutMe .picAndElem .elem h3 {
+  font-size: 2em;
+}
+body main #aboutMe .picAndElem .elem h5 {
+  font-size: 2.5em;
+}
 body main #timeline-content .timeline {
   border-left: 4px solid #54A496;
   border-bottom-right-radius: 4px;
@@ -211,7 +249,7 @@ body main #timeline-content .timeline .event:after {
     width: 98% !important;
   }
   main .timeline {
-    width: 100% !important;
+    width: 80% !important;
   }
   main h3 {
     font-size: 16px;
@@ -236,6 +274,72 @@ body main #timeline-content .timeline .event:after {
   }
   main #landing #centerGif {
     width: 100% !important;
+  }
+  main #aboutMe {
+    width: 80% !important;
+  }
+  main #aboutMe .picAndElem {
+    text-align: center;
+  }
+  main #aboutMe .picAndElem .picture {
+    width: 100% !important;
+  }
+  main #aboutMe .picAndElem .picture img {
+    width: 50% !important;
+    border-radius: 10px;
+  }
+  main #aboutMe .picAndElem .elem {
+    width: 100% !important;
+  }
+  main #aboutMe .picAndElem .elem h3, main #aboutMe .picAndElem .elem h5 {
+    padding: 5px 10px;
+  }
+  main #aboutMe .picAndElem .elem h3 {
+    font-size: 1.5em;
+  }
+  main #aboutMe .picAndElem .elem h5 {
+    font-size: 2em;
+  }
+  main .pageTitle {
+    padding-left: 30px;
+  }
+  main .pageTitle h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  main #timeline-content .timeline {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+  main #timeline-content .timeline .event {
+    padding: 0px;
+  }
+  main #timeline-content .timeline .event:after {
+    box-shadow: 0 0 0 4px fade(#54A496, 100%);
+    left: -27.85px !important;
+    background: #63afa2;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+    top: 5px;
+  }
+  main #aboutMe .picAndElem .picture {
+    width: 100% !important;
+  }
+  main #aboutMe .picAndElem .picture img {
+    width: 70% !important;
+    border-radius: 10px;
+  }
+  main #aboutMe .picAndElem .elem h3, main #aboutMe .picAndElem .elem h5 {
+    padding: 2.5px 5px;
+  }
+  main #aboutMe .picAndElem .elem h3 {
+    font-size: 1em !important;
+  }
+  main #aboutMe .picAndElem .elem h5 {
+    font-size: 1.5em !important;
   }
 }
 @keyframes slideUp {
