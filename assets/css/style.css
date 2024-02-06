@@ -29,9 +29,13 @@
   margin: 0px auto;
 }
 
+.fj-cyan {
+  color: #54A496;
+}
+
 body {
   color: #FFF;
-  background: radial-gradient(ellipse at center, rgb(37, 37, 37) 0%, rgb(27, 27, 27) 35%, #121212 100%);
+  background-color: #121212;
   font-family: "stranica";
 }
 body #loader {
@@ -52,13 +56,40 @@ body #loader .loaderBodySkeleton img {
   width: 50%;
 }
 body main {
-  width: 80%;
+  width: 100%;
   margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-body main .timeline {
+body main .container {
+  width: 80%;
+}
+body main #landing {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main #landing #centerGif {
+  width: 60%;
+  display: none;
+}
+body main #landing #centerGif img {
+  width: 100%;
+}
+body main #landing #landingMessage {
+  text-align: right;
+  width: 20%;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+}
+body main #timeline-content .timeline {
   border-left: 4px solid #54A496;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
@@ -70,26 +101,26 @@ body main .timeline {
   list-style: none;
   width: 50%;
 }
-body main .timeline .event {
+body main #timeline-content .timeline .event {
   border-bottom: 1px dashed fade(#FFF, 10%);
   position: relative;
   padding: 20px 0px;
 }
-body main .timeline .event .project {
+body main #timeline-content .timeline .event .project {
   width: 100%;
   border-radius: 10px;
   position: relative;
 }
-body main .timeline .event .project .imageProject, body main .timeline .event .project .descriptionProject {
+body main #timeline-content .timeline .event .project .imageProject, body main #timeline-content .timeline .event .project .descriptionProject {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-body main .timeline .event .project .imageProject img, body main .timeline .event .project .descriptionProject img {
+body main #timeline-content .timeline .event .project .imageProject img, body main #timeline-content .timeline .event .project .descriptionProject img {
   width: 100%;
   border-radius: 10px;
 }
-body main .timeline .event .project .descriptionProject {
+body main #timeline-content .timeline .event .project .descriptionProject {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -100,41 +131,41 @@ body main .timeline .event .project .descriptionProject {
   text-align: center;
   width: 100%;
 }
-body main .timeline .event .project .descriptionProject .title {
+body main #timeline-content .timeline .event .project .descriptionProject .title {
   color: #54A496;
 }
-body main .timeline .event .project .descriptionProject .title, body main .timeline .event .project .descriptionProject .description, body main .timeline .event .project .descriptionProject .linkButton {
+body main #timeline-content .timeline .event .project .descriptionProject .title, body main #timeline-content .timeline .event .project .descriptionProject .description, body main #timeline-content .timeline .event .project .descriptionProject .linkButton {
   padding: 10px 0px;
 }
-body main .timeline .event .project .descriptionProject .title p, body main .timeline .event .project .descriptionProject .description p, body main .timeline .event .project .descriptionProject .linkButton p {
+body main #timeline-content .timeline .event .project .descriptionProject .title p, body main #timeline-content .timeline .event .project .descriptionProject .description p, body main #timeline-content .timeline .event .project .descriptionProject .linkButton p {
   padding: 10px;
   font-size: 12px;
 }
-body main .timeline .event .project .descriptionProject a {
+body main #timeline-content .timeline .event .project .descriptionProject a {
   color: #FFF;
   text-decoration: none;
 }
-body main .timeline .event .project .descriptionProject a .linkButton {
+body main #timeline-content .timeline .event .project .descriptionProject a .linkButton {
   border: 1px solid white;
   transition: 0.5s;
 }
-body main .timeline .event .project .descriptionProject a .linkButton:hover {
+body main #timeline-content .timeline .event .project .descriptionProject a .linkButton:hover {
   background-color: #FFF;
 }
-body main .timeline .event .project .descriptionProject a:hover {
+body main #timeline-content .timeline .event .project .descriptionProject a:hover {
   color: #121212;
 }
-body main .timeline .event:last-of-type {
+body main #timeline-content .timeline .event:last-of-type {
   padding-bottom: 0;
   margin-bottom: 0;
   border: none;
 }
-body main .timeline .event:before, body main .timeline .event:after {
+body main #timeline-content .timeline .event:before, body main #timeline-content .timeline .event:after {
   position: absolute;
   display: block;
   top: 0;
 }
-body main .timeline .event:after {
+body main #timeline-content .timeline .event:after {
   box-shadow: 0 0 0 4px fade(#54A496, 100%);
   left: -57.85px;
   background: #63afa2;
@@ -145,10 +176,27 @@ body main .timeline .event:after {
   top: 5px;
 }
 
+.fadeIn {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
 .fadeOut {
   animation: fadeOut 0.5s ease-out forwards;
 }
 
+.slideUpShow {
+  animation: slideUp 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -159,7 +207,7 @@ body main .timeline .event:after {
   }
 }
 @media screen and (max-width: 770px) {
-  main {
+  main .container {
     width: 98% !important;
   }
   main .timeline {
@@ -176,6 +224,28 @@ body main .timeline .event:after {
   }
   main .title p, main .description p, main .linkButton p {
     padding: 5px;
+  }
+  main .pageTitle {
+    width: 100% !important;
+    padding: 10px 5px;
+  }
+  main #landing #landingMessage {
+    width: 45% !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+  main #landing #centerGif {
+    width: 100% !important;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 /* width */

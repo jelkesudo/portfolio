@@ -46,7 +46,7 @@
         "id": "6",
         "image": "vinyl.png",
         "title": "Vinylboy",
-        "description": "In this project the structure of php page consisted of only loading one page, with models being called with the appropriate page call, emulating modern frameworks.",
+        "description": "In this project the structure of php page consisted of only loading models from index page, emulating modern frameworks.",
         "href": "https://vinylboy.000webhostapp.com/index.php?page=Home"
     },
     {

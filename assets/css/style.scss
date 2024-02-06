@@ -37,9 +37,13 @@ $background: #252827;
 .fj-mx-auto{
     margin: 0px auto;
 }
+.fj-cyan{
+    color: $tirkiz;
+}
 body{
     color: $bela;
-    background:radial-gradient(ellipse at center, rgba(37,37,37,1) 0%, rgba(27,27,27,1) 35%, $crna 100%);
+    //background:radial-gradient(ellipse at center, rgba(37,37,37,1) 0%, rgba(27,27,27,1) 35%, $crna 100%);
+    background-color: $crna;
     font-family: "stranica";
     #loader{
         width: 100%;
@@ -59,105 +63,149 @@ body{
         }
     }
     main{
-        width: 80%;
+        width: 100%;
         margin: 0px auto;
         @include fleks;
         flex-direction: column;
-        .timeline {
-            border-left: $line solid $tirkiz;
-            border-bottom-right-radius: $radius;    
-            border-top-right-radius: $radius;    
-            color: fade(white, 80%);
-            margin: $spacing auto;  
-            letter-spacing: 0.5px;   
+        .container{
+            width: 80%;
+        }
+        #landing{
+            width: 100%;
+            height: 100vh;
             position: relative;
-            padding: $spacing;   
-            list-style: none;
-            width: 50%;
-            
-            .event {
-              border-bottom: 1px dashed fade($bela, 10%);
-              position: relative;
-              padding: 20px 0px;
-              .project{
-                width: 100%;
-                border-radius: 10px;
-                position: relative;
-                .imageProject, .descriptionProject{
+            @include fleks();
+            justify-content: center;
+            align-items: center;
+            #centerGif{
+                width: 60%;
+                display: none;
+                img{
                     width: 100%;
-                    height: 100%;
-                    border-radius: 10px;
-                    img{
-                        width: 100%;
-                        border-radius: 10px;
-                    }
                 }
-                .descriptionProject{
-                    position: absolute;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    top: 0;
-                    left: 0;
-                    background-color: rgba(12,12,12,0.8);
-                    text-align: center;
-                    width: 100%;
-                    .title{
-                        color: $tirkiz;
-                    }
-                    .title, .description, .linkButton{
-                        padding: 10px 0px;
-                        p{
-                            padding: 10px;
-                            font-size: 12px;
-                        }
-                    }
-                    a{
-                        color: $bela;
-                        text-decoration: none;
-                        .linkButton{
-                            border: 1px solid white;
-                            transition: 0.5s;
-                            &:hover{
-                                background-color: $bela;
-                            }
-                        }
-                        &:hover{
-                            color: $crna;
-                        }
-                    }
-                    
-                }
-              }
-              &:last-of-type { 
-                padding-bottom: 0;
-                margin-bottom: 0; 
-                border: none;      
-              }
-          
-              &:before, &:after {
+            }
+            #landingMessage{
+                text-align: right;
+                width: 20%;
                 position: absolute;
-                display: block;
-                top: 0;
-              }
-          
-          
-              &:after {
-                box-shadow: 0 0 0 $dotborder fade($tirkiz,100%);    
-                left: ($spacing + $line + ($dot * 0.35)) * -1;        
-                background: lighten($tirkiz,5%);    
-                border-radius: 50%;  
-                height: $dot;
-                width: $dot;
-                content: "";
-                top: 5px;
-              }
+                bottom: 50px;
+                right: 50px;
+                opacity: 0;
             }
         }
+        #timeline-content{
+            .timeline {
+                border-left: $line solid $tirkiz;
+                border-bottom-right-radius: $radius;    
+                border-top-right-radius: $radius;    
+                color: fade(white, 80%);
+                margin: $spacing auto;  
+                letter-spacing: 0.5px;   
+                position: relative;
+                padding: $spacing;   
+                list-style: none;
+                width: 50%;
+                
+                .event {
+                  border-bottom: 1px dashed fade($bela, 10%);
+                  position: relative;
+                  padding: 20px 0px;
+                  .project{
+                    width: 100%;
+                    border-radius: 10px;
+                    position: relative;
+                    .imageProject, .descriptionProject{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                    .descriptionProject{
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(12,12,12,0.8);
+                        text-align: center;
+                        width: 100%;
+                        .title{
+                            color: $tirkiz;
+                        }
+                        .title, .description, .linkButton{
+                            padding: 10px 0px;
+                            p{
+                                padding: 10px;
+                                font-size: 12px;
+                            }
+                        }
+                        a{
+                            color: $bela;
+                            text-decoration: none;
+                            .linkButton{
+                                border: 1px solid white;
+                                transition: 0.5s;
+                                &:hover{
+                                    background-color: $bela;
+                                }
+                            }
+                            &:hover{
+                                color: $crna;
+                            }
+                        }
+                        
+                    }
+                  }
+                  &:last-of-type { 
+                    padding-bottom: 0;
+                    margin-bottom: 0; 
+                    border: none;      
+                  }
+              
+                  &:before, &:after {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                  }
+              
+              
+                  &:after {
+                    box-shadow: 0 0 0 $dotborder fade($tirkiz,100%);    
+                    left: ($spacing + $line + ($dot * 0.35)) * -1;        
+                    background: lighten($tirkiz,5%);    
+                    border-radius: 50%;  
+                    height: $dot;
+                    width: $dot;
+                    content: "";
+                    top: 5px;
+                  }
+                }
+            }
+        }
+        
     }
+}
+.fadeIn{
+    animation: fadeIn 0.5s ease-in forwards;
 }
 .fadeOut{
     animation: fadeOut 0.5s ease-out forwards;
+}
+.slideUpShow{
+    animation: slideUp 0.5s ease-in;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
 }
 @keyframes fadeOut {
     0% {
@@ -170,7 +218,9 @@ body{
 }
 @media screen and (max-width: 770px) {
     main{
-        width: 98% !important;
+        .container{
+            width: 98% !important;
+        }
         .timeline {
             width: 100% !important;
         }
@@ -186,6 +236,30 @@ body{
                 padding: 5px;
             }
         }
+        .pageTitle{
+            width: 100% !important;
+            padding: 10px 5px;
+        }
+        #landing{
+            #landingMessage{
+                width: 45% !important;
+                bottom: 20px !important;
+                right: 20px !important;
+            }
+            #centerGif {
+                width: 100% !important;
+            }
+        }
+    }
+}
+@keyframes slideUp{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
 /* width */

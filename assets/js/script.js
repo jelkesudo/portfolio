@@ -5,13 +5,21 @@ window.onload = function(){
 
     $(document.body).css("overflow","hidden");
     $("#pictureLoad").attr("src", srcImage);
+    setTimeout(function () {
+        let loader = $("#loader");
+        let landingMessage = $("#landingMessage");
+        let centerGif = $("#centerGif");
     
-    setTimeout(function(){
-        $("#loader").addClass("fadeOut");
-        setTimeout(function() {
-            $("#loader").css("display", "none");
+        loader.addClass("fadeOut");
+        setTimeout(function () {
+            loader.hide();
+            landingMessage.addClass("slideUpShow").css("opacity", "1");
+            setTimeout(function(){
+                centerGif.addClass("fadeIn").css("display", "block");
+            }, 500);
         }, 500);
-        $(document.body).css("overflow","visible");
+    
+        $(document.body).css("overflow", "visible");
     }, 2000);
     ajaxCallBack("assets/data/timeline.json", function(result){
         printTimeline(result);
