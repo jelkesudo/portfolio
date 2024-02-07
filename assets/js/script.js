@@ -42,7 +42,7 @@ function printSimpleTimelineUnit(d){
 }
 
 function printImageTimelineUnit(d){
-    return `<li class="event" data-aos="fade-down">
+    return `<li class="event" data-aos="fade-down" data-date="${d.year}">
     <div class="project">
       <div class="imageProject">
         <img src="assets/img/${d.image}" alt="portfolio">
