@@ -35,7 +35,7 @@ function printTimeline(data){
 }
 
 function printSimpleTimelineUnit(d){
-    return `<li class="event">
+    return `<li class="event" data-aos="fade-down">
     <h3>${d.title}</h3>
     <p>${d.description}</p>
   </li>`;
