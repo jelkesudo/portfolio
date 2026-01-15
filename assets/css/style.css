@@ -211,7 +211,7 @@ body main #timeline-content .timeline .event:before, body main #timeline-content
 body main #timeline-content .timeline .event:after {
   box-shadow: 0 0 0 4px fade(#54A496, 100%);
   left: -57.85px;
-  background: #63afa2;
+  background: rgb(98.6048387097, 174.8951612903, 161.5443548387);
   border-radius: 50%;
   height: 11px;
   width: 11px;
@@ -332,7 +332,7 @@ body main #timeline-content .timeline .event:before {
   main #timeline-content .timeline .event:after {
     box-shadow: 0 0 0 4px fade(#54A496, 100%);
     left: -27.85px !important;
-    background: #63afa2;
+    background: rgb(98.6048387097, 174.8951612903, 161.5443548387);
     border-radius: 50%;
     height: 11px;
     width: 11px;

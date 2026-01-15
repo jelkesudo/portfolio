@@ -56,6 +56,18 @@
         "year": "2022"
     },
     {
+        "title": "Full Stack Web Apps",
+        "description": "With many skills and wast knowledge aquired, I have gone into making scalable and stable web apps for client purposes, this point marks the start of my client demand based journey."
+    },
+    {
+        "id": "7",
+        "image": "levelsupplements.png",
+        "title": "Level Supplements",
+        "description": "My most complex project to this day, a web shop for supplementation that includes the cart, ordering, cascading categories, dedicated admin panel with insights, all done in Angular, C# .NET 8 ASP, with database in MSSQL all hosted on Azure as a Web App.",
+        "href": "https://levelsupplements.net",
+        "year": "2025"
+    },
+    {
         "title": "What is next?",
         "description": "There are more projects that are not hosted at the moment, from those done in Angular, Laravel and other technologies as ASP.NET that you can see on my github page by clicking <a class='fj-cyan' target='_blank' href='https://github.com/jelkesudo'>here</a>. Of course, this timeline will only grow."
     }
